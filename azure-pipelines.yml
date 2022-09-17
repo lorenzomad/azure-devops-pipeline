@@ -1,24 +1,11 @@
 # Starter pipeline
-- task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'pipeline service connection'
-    appType: 'webAppLinux'
-    appName: 'mywebapplorenzo123'
-    deployToSlotOrASE: true
-    resourceGroupName: 'Azuredevops'
-    slotName: 'production'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    runtimeStack: 'PYTHON|3.7'
-    startUpCommand: 'python app.py'
+
 
 
 trigger:
 - main
 
 pool: Agent pool lorenzo
-
-pool:
-  vmImage: ubuntu-latest
 
 variables:
   # TODO: Replace the service connection name as used in the DevOps project settings
